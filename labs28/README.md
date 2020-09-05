@@ -3,9 +3,12 @@
 测试结果：
 
 ```
-$ go test -bench="."
+$ go test -bench="." ./labs28
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs28
+Benchmark_Normal-4              263856129                4.51 ns/op
+Benchmark_ByteString-4          1000000000               0.281 ns/op
 PASS
-Benchmark_Normal	20000000	        63.4 ns/op
-Benchmark_ByteString	2000000000	         0.55 ns/op
-ok  	github.com/idada/go-labs/labs28	2.486s
+ok      github.com/aptxx/go-labs/labs28 1.975s
 ```

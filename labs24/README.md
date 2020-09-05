@@ -3,11 +3,13 @@
 测试结果：
 
 ```
-dada-imac:labs24 dada$ go test -v -bench='.*'
-testing: warning: no tests to run
+$ go test -bench="." ./labs24
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs24
+Benchmark_UseBinaryWrite1-4     31254313                34.3 ns/op
+Benchmark_UseBinaryWrite2-4      9977683               118 ns/op
+Benchmark_UseHardcode-4         82606509                14.5 ns/op
 PASS
-Benchmark_UseBinaryWrite1	50000000	        68.5 ns/op
-Benchmark_UseBinaryWrite2	10000000	       279 ns/op
-Benchmark_UseHardcode	100000000	        21.5 ns/op
-ok  	github.com/idada/go-labs/labs24	8.771s
+ok      github.com/aptxx/go-labs/labs24 3.636s
 ```

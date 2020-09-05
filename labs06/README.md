@@ -2,14 +2,18 @@
 
 试验结果：
 
-    dada-imac:labs dada$ go test -test.bench="." labs06
-    testing: warning: no tests to run
-    PASS
-    Benchmark_Loop1    500000000             5.73 ns/op
-    Benchmark_Loop2    500000000             5.72 ns/op
-    Benchmark_Loop3    50000000              68.0 ns/op
-    Benchmark_Loop4    500000000             4.92 ns/op
-    Benchmark_Loop5    500000000             4.40 ns/op
-    ok  	labs06	15.970s    
+```
+$ go test -test.bench="." ./labs06
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs06
+Benchmark_Loop1-4       329194624                3.99 ns/op
+Benchmark_Loop2-4       286965111                4.03 ns/op
+Benchmark_Loop3-4       99019704                10.7 ns/op
+Benchmark_Loop4-4       354465376                3.36 ns/op
+Benchmark_Loop5-4       1000000000               0.276 ns/op
+PASS
+ok      github.com/aptxx/go-labs/labs06 6.192s
+```
 
-结论：硬编码 < 指针slice的range循环 < for循环，但是量级是一样的，看情况用。但是map差了一个量级，小数据量尽量少用。
+结论：硬编码 << for-range < for << map，map 小数据量尽量少用。

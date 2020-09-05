@@ -3,10 +3,12 @@
 实验结果：
 
 ```
-dada-imac:labs18 dada$ go test -bench=".*"
-testing: warning: no tests to run
+$ go test -bench="." ./labs18
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs18
+Benchmark_UseSwitch-4           265054311                4.42 ns/op
+Benchmark_UseCallback-4         472585510                2.54 ns/op
 PASS
-Benchmark_UseSwitch	200000000	         9.58 ns/op
-Benchmark_UseCallback	200000000	         8.05 ns/op
-ok  	github.com/idada/go-labs/labs18	5.323s
+ok      github.com/aptxx/go-labs/labs18 3.103s
 ```

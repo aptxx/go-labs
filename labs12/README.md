@@ -2,10 +2,15 @@
 
 实验结果：
 
-    dada-imac:labs dada$ go test -test.bench=".*" labs12
-    PASS
-    Benchmark_AllocAndFree	10000000	       190 ns/op
-    Benchmark_JeAllocAndFree	20000000	       135 ns/op
-    ok  	labs12	4.971s
+```
+$ go test -test.bench=".*" ./labs12
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs12
+Benchmark_AllocAndFree-4         9089193               131 ns/op
+Benchmark_JeAllocAndFree-4       8907132               139 ns/op
+PASS
+ok      github.com/aptxx/go-labs/labs12 2.723s
+```
 
-实验结论：还是有差的
+实验结论：非常相近

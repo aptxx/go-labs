@@ -3,10 +3,12 @@
 测试结果：
 
 ```
-> go test labs20 -bench=".*"
-testing: warning: no tests to run
+$ go test -bench="." ./labs20
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs20
+Benchmark_Go_Call_C-4           18249034                58.2 ns/op
+Benchmark_C_Call_GO-4            8984389               131 ns/op
 PASS
-Benchmark_Go_Call_C	50000000	        55.6 ns/op
-Benchmark_C_Call_GO	 5000000	       434 ns/op
-ok  	labs20	5.473s
+ok      github.com/aptxx/go-labs/labs20 2.457s
 ```

@@ -2,15 +2,15 @@ package labs29
 
 import (
 	"bufio"
-	"code.google.com/p/snappy-go/snappy"
 	"compress/gzip"
 	"encoding/json"
 	"io"
 	"os"
 	"testing"
-)
+	"time"
 
-import "time"
+	"github.com/golang/snappy"
+)
 
 type M map[string]interface{}
 

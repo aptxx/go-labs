@@ -7,15 +7,18 @@
 我电脑上测试结果如下：
 
 ```
-$ go test -bench="."
+$ go test -bench="." ./labs31
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs31
+Benchmark_Normal-4      66063288                18.1 ns/op
+Benchmark_Search-4      73216268                15.7 ns/op
+Benchmark_Switch-4      229720687                5.04 ns/op
+Benchmark_IF1-4         273368570                4.39 ns/op
+Benchmark_IF2-4         543851665                2.20 ns/op
+Benchmark_IF3-4         1000000000               0.273 ns/op
 PASS
-Benchmark_Normal-4	50000000	        25.6 ns/op
-Benchmark_Search-4	100000000	        21.7 ns/op
-Benchmark_Switch-4	100000000	        12.5 ns/op
-Benchmark_IF1-4   	200000000	         9.14 ns/op
-Benchmark_IF2-4   	300000000	         3.89 ns/op
-Benchmark_IF3-4   	1000000000	         2.37 ns/op
-ok  	github.com/idada/go-labs/labs31	11.822s
+ok      github.com/aptxx/go-labs/labs31 7.533s
 ```
 
 呵呵，蛋好疼。

@@ -3,10 +3,12 @@
 测试结果：
 
 ```
-$ go test -bench="."
-testing: warning: no tests to run
+$ go test -bench="." ./labs26
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs26
+Benchmark_NormalFuncCall-4      1000000000               0.279 ns/op
+Benchmark_ReflectFuncCall-4      3466174               360 ns/op
 PASS
-Benchmark_NormalFuncCall	2000000000	         0.53 ns/op
-Benchmark_ReflectFuncCall	 2000000	       667 ns/op
-ok  	github.com/idada/go-labs/labs26	3.116s
+ok      github.com/aptxx/go-labs/labs26 1.918s
 ```

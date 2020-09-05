@@ -3,9 +3,11 @@
 测试结果:
 
 ```
-$ go test -bench="."
-testing: warning: no tests to run
+$ go test -bench="." ./labs27
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs27
+Benchmark_Goid-4          335473              3453 ns/op
 PASS
-Benchmark_Goid	  500000	      3612 ns/op
-ok  	github.com/idada/go-labs/labs27	1.848s
+ok      github.com/aptxx/go-labs/labs27 1.203s
 ```

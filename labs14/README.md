@@ -2,5 +2,8 @@
 
 运行：
 
-    go run cgo_copy.go
-
+```
+$ go run cgo_copy.go
+Go to C: 293
+C to Go: 333
+```

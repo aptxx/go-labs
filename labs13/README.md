@@ -2,20 +2,30 @@
 
 测试存储结构体和存储对象的map类型占用的对象数量：
 
-    go run many_object1.go -gcflags '-N' | grep -o "HeapObjects.*"
-
-    go run many_object2.go -gcflags '-N' | grep -o "HeapObjects.*"
+```
+$ go run many_object1.go -gcflags '-N' | grep -o "HeapObjects.*"
+HeapObjects = 10376
+$ go run many_object2.go -gcflags '-N' | grep -o "HeapObjects.*"
+HeapObjects = 10390
+```
 
 测试存储结构体和存储对象的slice类型占用的对象数量：
 
-    go run many_object3.go -gcflags '-N' | grep -o "HeapObjects.*"
-
-    go run many_object4.go -gcflags '-N' | grep -o "HeapObjects.*"
+```
+$ go run many_object3.go -gcflags '-N' | grep -o "HeapObjects.*"
+HeapObjects = 161
+$ go run many_object4.go -gcflags '-N' | grep -o "HeapObjects.*"
+HeapObjects = 10165
+```
 
 未初始化的Slice和make后的Slice类型字段占用的对象数量：
 
-    go run many_object5.go -gcflags '-N' | grep -o "HeapObjects.*"
-    go run many_object6.go -gcflags '-N' | grep -o "HeapObjects.*"
+```
+$ go run many_object5.go -gcflags '-N' | grep -o "HeapObjects.*"
+HeapObjects = 166
+$ go run many_object6.go -gcflags '-N' | grep -o "HeapObjects.*"
+HeapObjects = 15165
+```
 
 实验结论：
 

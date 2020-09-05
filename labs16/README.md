@@ -3,11 +3,13 @@
 测试结果：
 
 ```
-dada-imac:labs dada$ go test labs16 --bench="."
-testing: warning: no tests to run
+$ go test --bench="." ./labs16
+goos: linux
+goarch: amd64
+pkg: github.com/aptxx/go-labs/labs16
+Benchmark_Method1-4      4155932               292 ns/op
+Benchmark_Method2-4     1000000000               0.279 ns/op
+Benchmark_Method3-4     1000000000               0.279 ns/op
 PASS
-Benchmark_Method1         500000              6677 ns/op
-Benchmark_Method2       500000000             6.48 ns/op
-Benchmark_Method3       500000000             3.73 ns/op
-ok      labs16  9.558s
+ok      github.com/aptxx/go-labs/labs16 2.141s
 ```

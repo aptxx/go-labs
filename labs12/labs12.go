@@ -1,10 +1,9 @@
 package labs12
 
-/*
-#cgo LDFLAGS: -ljemalloc
-#include <stdlib.h>
-#include <jemalloc/jemalloc.h>
-*/
+// #cgo CFLAGS: -DJEMALLOC_NO_DEMANGLE=1
+// #cgo LDFLAGS: -L/usr/lib/x86_64-linux-gnu/libjemalloc.so.2 -ljemalloc
+// #include <stdlib.h>
+// #include <jemalloc/jemalloc.h>
 import "C"
 import "unsafe"
 
